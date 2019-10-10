@@ -23,10 +23,10 @@ app.post('/contact-me', (req, res) => {
     })
     console.log(cont)
     .then((data)=>{
-        res.json('sent')
+        return res.json('sent')
     }).catch((err)=>{
         console.log(err)
-        res.json('notsent')
+        return res.json('notsent')
     })
     
 })
