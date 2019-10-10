@@ -27,4 +27,4 @@ app.post('/contact-me', (req, res) => {
     
 })
 
-app.listen('3002')
+app.listen(process.env.PORT)
