@@ -21,14 +21,6 @@ app.post('/contact-me', (req, res) => {
         email: req.body.email,
         message: req.body.message
     })
-    console.log(cont)
-    .then((data)=>{
-        res.send('sent')
-    }).catch((err)=>{
-        console.log(err)
-        res.send('notsent')
-    })
-    
 })
 
 app.listen(process.env.PORT, ()=>{
