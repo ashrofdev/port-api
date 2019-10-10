@@ -15,7 +15,7 @@ app.get('/', (req, res) =>{
     console.log(cont, '........')
 })
 
-app.post('/cont-me', (req, res) => {
+app.post('/contact-me', (req, res) => {
     cont.push({
         name: req.body.name,
         email: req.body.email,
