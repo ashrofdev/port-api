@@ -39,7 +39,9 @@ app.post('/contact-me', (req, res) => {
         res.json(error)
     } else {
         console.log('Email sent: ' + info.response);
-        res.json('cont')
+        res.json({
+            result: info.response
+        })
     }
     });
 
