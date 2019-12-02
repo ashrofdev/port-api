@@ -30,7 +30,7 @@ app.post('/contact-me', (req, res) => {
     from: 'ashsal2001@gmail.com',
     to: 'ashsall115@gmail.com',
     subject: 'Sending Email using Node.js',
-    text: 'WOW it actually worked!'
+    text: 'WOW it actually worked! from port'
     };
 
     transporter.sendMail(mailOptions, function(error, info){
