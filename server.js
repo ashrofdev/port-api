@@ -49,7 +49,6 @@ app.post('/contact-me', (req, res) => {
         message: req.body.message
     })
     console.log(cont)
-        res.json(cont)
     
 })
 
