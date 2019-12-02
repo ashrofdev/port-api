@@ -47,9 +47,7 @@ app.post('/contact-me', (req, res) => {
         message: req.body.message
     })
     console.log(cont)
-    .then((data)=>{
-        res.json(data)
-    })
+        res.json(cont)
     
 })
 
