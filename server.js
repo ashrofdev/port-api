@@ -18,6 +18,12 @@ app.get('/', (req, res) =>{
 
 app.post('/contact-me', (req, res) => {
 
+    cont.push({
+        name: req.body.name,
+        email: req.body.email,
+        message: req.body.message
+    })
+
     const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
@@ -40,16 +46,13 @@ app.post('/contact-me', (req, res) => {
     } else {
         console.log('Email sent: ' + info.response);
         res.json({
-            result: info.response
+            result: info.response,
+            cont: cont
         })
     }
     });
 
-    cont.push({
-        name: req.body.name,
-        email: req.body.email,
-        message: req.body.message
-    })
+    
     console.log(cont)
     
 })
