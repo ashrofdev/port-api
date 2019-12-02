@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
+const nodemailer = require('nodemailer')
 
 const app = express()
 
@@ -16,7 +17,6 @@ app.get('/', (req, res) =>{
 })
 
 app.post('/contact-me', (req, res) => {
-    const nodemailer = require('nodemailer');
 
     const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -53,6 +53,4 @@ app.post('/contact-me', (req, res) => {
     
 })
 
-app.listen(process.env.PORT, ()=>{
-    console.log(process.env.PORT)
-})
+app.listen(process.env.PORT || 3002)
