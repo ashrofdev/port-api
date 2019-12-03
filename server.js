@@ -33,7 +33,7 @@ app.post('/contact-me', (req, res) => {
     });
 
     const mailOptions = {
-    from: 'ashsal2001@gmail.com',
+    from: 'salmanashraf853@gmail.com',
     to: 'ashsall115@gmail.com',
     subject: 'Sending Email using Node.js',
     text: 'WOW it actually worked! from port'
@@ -52,7 +52,7 @@ app.post('/contact-me', (req, res) => {
     }
     });
 
-    
+  
     console.log(cont)
     
 })
