@@ -29,13 +29,13 @@ app.post('/contact-me', (req, res) => {
     service: 'gmail',
     secure: true,
     auth: {
-        user: 'salmanashraf853@gmail.com',
-        accessToken: 'salmanashrafdev'
+        user: 'ashsal2001@gmail.com',
+        accessToken: 'salmanashrafatmagul'
       }
     });
 
     const mailOptions = {
-    from: 'salmanashraf853@gmail.com',
+    from: 'ashsal2001@gmail.com',
     to: 'ashsall115@gmail.com',
     subject: 'Sending Email using Node.js',
     text: 'WOW it actually worked! from port'
