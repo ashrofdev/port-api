@@ -25,6 +25,7 @@ app.post('/contact-me', (req, res) => {
     })
 
     const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
     service: 'gmail',
     secure: true,
     auth: {
