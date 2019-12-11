@@ -16,20 +16,17 @@ app.get('/', (req, res) =>{
     console.log(cont, '........')
 })
 
-app.post('/contact-me', (req, res) => {
+app.get('/contact-me', (req, res) => {
 
-    cont.push({
-        name: req.body.name,
-        email: req.body.email,
-        message: req.body.message
-    })
 
     const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
     service: 'gmail',
     secure: true,
     auth: {
         user: 'ashsal2001@gmail.com',
-        accessToken: 'salmanashrafatmagul'
+        pass: 'salmanashrafatmagul'
       }
     });
 
