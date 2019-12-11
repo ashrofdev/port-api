@@ -26,6 +26,7 @@ app.post('/contact-me', (req, res) => {
 
     const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
+    port: 587,
     service: 'gmail',
     secure: true,
     auth: {
@@ -45,8 +46,7 @@ app.post('/contact-me', (req, res) => {
     if (error) {
         console.log(error);
         res.json({
-            error,
-            j: 'd'
+            error
         })
     } else {
         console.log('Email sent: ' + info.response);
