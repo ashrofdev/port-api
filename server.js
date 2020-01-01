@@ -16,6 +16,11 @@ app.get('/', (req, res) =>{
     console.log(cont, '........')
 })
 
+app.post('/test', (req, res) => {
+    const t = req.body.test
+    res.json('fffff'+t)
+})
+
 app.post('/contact-me', (req, res) => {
     const name = req.body.name
     const email = req.body.email
