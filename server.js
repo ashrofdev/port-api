@@ -21,11 +21,7 @@ app.post('/test', (req, res) => {
     res.json('fffff'+t)
 })
 
-app.post('/contact-me', (req, res) => {
-    const name = req.body.name
-    const email = req.body.email
-    const message = req.body.message
-
+app.get('/contact-me', (req, res) => {
     const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 465,
@@ -42,10 +38,10 @@ app.post('/contact-me', (req, res) => {
     to: 'ashsall115@gmail.com',
     subject: 'Sending Email using Node.js',
     text: `
-        Hey man, you've got a job request from ${name}
-        His Email address is ${email}
+        Hey man, you've got a job request from ${'name'}
+        His Email address is ${'email'}
         And here is the message he sent you ==>>
-        ${message} <<==
+        ${'message'} <<==
     `
     };
 
